@@ -11,7 +11,9 @@ export default function Footer() {
           <form className="contact-form" onSubmit={(event) => event.preventDefault()}><label><span className="sr-only">Your name</span><input required placeholder="Your name" /></label><label><span className="sr-only">Email address</span><input required type="email" placeholder="Email address" /></label><label><span className="sr-only">Project details</span><textarea required placeholder="Tell me about the project" /></label><button className="button button-secondary" type="submit">Send inquiry <ArrowUpRight size={17} /></button></form>
         </div>
       </section>
-      <footer className="site-footer"><span>© 2026 MayorTech. Built with care.</span><span><a href="https://github.com" aria-label="GitHub"><FaGithub size={15} /></a> <a href="https://linkedin.com" aria-label="LinkedIn"><FaLinkedin size={15} /></a> <a href="https://twitter.com" aria-label="Twitter"><FaTwitter size={15} /></a></span></footer>
+      <footer className="site-footer"><span>© 2026 MayorTech. Built with care.</span>
+      <span className="footer-link">
+        <a href="https://github.com" aria-label="GitHub"><FaGithub size={15} /></a> <a href="https://linkedin.com" aria-label="LinkedIn"><FaLinkedin size={15} /></a> <a href="https://twitter.com" aria-label="Twitter"><FaTwitter size={15} /></a></span></footer>
     </>
   )
 }
