@@ -1,12 +1,13 @@
 import { Atom, BriefcaseBusiness, CheckCircle2, Code2, Heart, Package, ShieldCheck, Target } from 'lucide-react'
 import Profilepic from '../assets/profile.png'
+import Reveal from './Reveal'
 
 export default function About() {
   const stats = [[BriefcaseBusiness, '6+', 'Years experience'], [Package, '28+', 'Projects completed'], [ShieldCheck, '15+', 'Happy clients'], [Atom, '1M+', 'Users impacted']] as const
   const principles = [[Code2, 'Clean and maintainable'], [Target, 'Performance focused'], [CheckCircle2, 'Pixel perfect design'], [Heart, 'Scalable architecture']] as const
 
   return (
-    <section className="content-section" id="about">
+    <Reveal className="content-section" id="about">
       <p className="section-kicker">About me</p>
       <h2 className="section-heading">Building with purpose. <em>Designing with impact.</em></h2>
       <div className="about-grid">
@@ -20,6 +21,6 @@ export default function About() {
           <div className="principles">{principles.map(([Icon, label]) => <div key={label}><Icon size={17} />{label}</div>)}</div>
         </div>
       </div>
-    </section>
+    </Reveal>
   );
 }
