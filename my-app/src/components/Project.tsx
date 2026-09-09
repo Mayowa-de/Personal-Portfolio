@@ -1,7 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import Ecommerce from '../assets/Ecommerce.png'
 import Blog from '../assets/blog1.png'
-import Browser from '../assets/Browser.PNG'
+import Browser from '../assets/Ecommerce.png'
 import Dashboard from '../assets/WeatherApp.png'
 import FX_Checker from '../assets/currencyExchanger.png'
 
