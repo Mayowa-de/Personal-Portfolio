@@ -17,14 +17,14 @@ export default function Hero() {
           <a className="button button-secondary" href="#work">View My Work</a>
         </div>
         <div className="social-row" aria-label="Social links">
-          <a href="https://github.com" aria-label="GitHub"><FaGithub /></a><a href="https://linkedin.com" aria-label="LinkedIn"><FaLinkedin /></a><a href="https://twitter.com" aria-label="Twitter"><FaTwitter /></a>
+          <a target="_blank" href="https://github.com/Mayowa-de" aria-label="GitHub"><FaGithub /></a><a target="_blank" href="https://linkedin.com" aria-label="LinkedIn"><FaLinkedin /></a><a target="_blank" href="https://twitter.com" aria-label="Twitter"><FaTwitter /></a>
         </div>
       </div>
       <div className="hero-visual" aria-label="Laptop showing a code editor">
         <div className="hero-grid" />
         <div className="laptop-stage"><img src={Laptop} alt="Laptop with code on screen" /></div>
         <div className="floating-stat stat-one"><Code2 size={16} /><strong>28+</strong><span>Projects shipped</span></div>
-        <div className="floating-stat stat-two"><Layers3 size={16} /><strong>6 yrs</strong><span>Building for web</span></div>
+        <div className="floating-stat stat-two"><Layers3 size={16} /><strong>3 yrs</strong><span>Building for web</span></div>
         <div className="floating-stat stat-three"><Sparkles size={16} /><strong>1M+</strong><span>Users impacted</span></div>
       </div>
       <div className="trusted"><p>TRUSTED BY INNOVATIVE COMPANIES</p><div>{[[Acm, 'AcmeCorp'], [CodeShip, 'Shippo'], [ReasonStudio, 'loopstudio']].map(([logo, name]) => <span key={name}><img src={logo} alt="" />{name}</span>)}</div></div>
