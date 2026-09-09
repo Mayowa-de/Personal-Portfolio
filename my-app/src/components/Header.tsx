@@ -1,19 +1,29 @@
-import {Sun, Moon} from 'lucide-react'
-import {Menu, X} from 'lucide-react'
+import { Menu, Moon, Sun, X } from 'lucide-react'
+import { useState } from 'react'
 
-export default function Header() {
+type HeaderProps = {
+  isLight: boolean
+  onThemeToggle: () => void
+}
+
+export default function Header({ isLight, onThemeToggle }: HeaderProps) {
+  const [isOpen, setIsOpen] = useState(false)
+  const links = ['About', 'Work', 'Process', 'Contact']
+
   return (
-    <header className=" text-white py-4 flex justify-between px-4 text-center items-center">
-        <h1 className='text-2 font-bold text-[#cf6223]'>MayorTech</h1>
-
-        <div className='flex gap-2 justify-center'>
-        {/* <div className='bg-white rounded-full text-yellow-600 text-center justify-center flex p-1 cursor-pointer'>
-           <Sun/>
-        </div> */}
-        <div className=' rounded p-1 justify-center text-center cursor-pointer md:hidden'>
-          <Menu className='text-[#ed7e39] '/>
-        </div>
-        </div>
+    <header className="site-header">
+      <a href="#top" className="brand" aria-label="MayorTech home">Mayor<span>Tech</span></a>
+      <nav className={`site-nav ${isOpen ? 'is-open' : ''}`} aria-label="Primary navigation">
+        {links.map((link) => <a key={link} href={`#${link.toLowerCase()}`} onClick={() => setIsOpen(false)}>{link}</a>)}
+      </nav>
+      <div className="header-actions">
+        <button className="icon-button" type="button" onClick={onThemeToggle} aria-label={isLight ? 'Use dark theme' : 'Use light theme'}>
+          {isLight ? <Moon size={18} /> : <Sun size={18} />}
+        </button>
+        <button className="icon-button menu-toggle" type="button" onClick={() => setIsOpen((value) => !value)} aria-label={isOpen ? 'Close menu' : 'Open menu'} aria-expanded={isOpen}>
+          {isOpen ? <X size={21} /> : <Menu size={21} />}
+        </button>
+      </div>
     </header>
   )
 }

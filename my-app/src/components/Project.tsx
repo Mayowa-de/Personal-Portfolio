@@ -1,55 +1,18 @@
-import Ecommerce from '../assets/ecommerce1 (2).png'
+import { ArrowUpRight } from 'lucide-react'
+import Ecommerce from '../assets/Ecommerce.png'
 import Blog from '../assets/blog1.png'
+import Browser from '../assets/Browser.PNG'
+import Dashboard from '../assets/WeatherApp.png'
+import FX_Checker from '../assets/currencyExchanger.png'
 
 
 export default function Project() {
   return (
-    <section className='flex flex-col gap-10 p-4  mt-4 '>
-        <h4 className='text-[#cf6223]'>FEATURED WORK</h4>
-
-        <p>Projects I'm Proud Of</p>
-        <div className='flex flex-col gap-6 md:grid md:grid-cols-4 '>
-        <div className='flex flex-col gap-4 rounded shadow bg-[#030a13] pb-4 '>
-    
-            <img src={Ecommerce} alt="" />
-            <div className='flex flex-col gap-2 px-4'>
-            <h4>Ecommerce website</h4>
-            <p>
-
-            </p>
-            <ul className='flex gap-4 text-sm'>
-                <li>REACT</li>
-                <li>Tailwindcss</li>
-                <li></li>
-            </ul>
-            </div>
-        </div>
-        <div className='flex flex-col gap-4 rounded shadow bg-[#030a13] pb-4'>
-            <img src={Blog} alt="" />
-            <div className='flex flex-col gap-2 px-4'>
-            <h4>Blog website</h4>
-            <p>
-
-            </p>
-            <ul className='flex gap-4 text-sm'>
-                <li>REACT</li>
-                <li>Tailwindcss</li>
-                <li></li>
-            </ul>
-            </div>
-        </div>
-        {/* <div className='flex flex-col gap-4 rounded shadow'>
-            <img src={Browser} alt="" />
-            <h4>Browser website</h4>
-            <p>
-
-            </p>
-            <ul className='flex gap-4'>
-                <li>REACT</li>
-                <li>Tailwindcss</li>
-                <li></li>
-            </ul>
-        </div> */}
+    <section className="content-section" id="work">
+        <p className="section-kicker">Featured work</p>
+        <h2 className="section-heading">Projects I am <em>proud of.</em></h2>
+        <div className="project-grid">
+          {[[Ecommerce, 'Ecommerce platform', 'A conversion-focused shopping experience.', ['React', 'Tailwind CSS']], [Blog, 'Publishing platform', 'A thoughtful space for long-form content.', ['React', 'TypeScript']], [Browser, 'Browser dashboard', 'A fast interface for managing daily work.', ['React', 'Node.js']], [Dashboard, 'Product analytics', 'Clear data stories for better decisions.', ['React', 'Charts']], [FX_Checker, 'Product analytics', 'Clear data stories for better decisions.', ['React', 'Charts']]].map(([image, title, description, tags]) => <article className="project-card" key={title as string}><img src={image as string} alt={`${title} project preview`} /><div className="project-card-body"><h3>{title}</h3><p>{description}</p><ul className="tag-list">{(tags as string[]).map((tag) => <li key={tag}>{tag}</li>)}<li aria-hidden="true"><ArrowUpRight size={14} /></li></ul></div></article>)}
         </div>
     </section>
   )
