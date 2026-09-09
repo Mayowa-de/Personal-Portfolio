@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="floating-stat stat-two"><Layers3 size={16} /><strong>3 yrs</strong><span>Building for web</span></div>
         <div className="floating-stat stat-three"><Sparkles size={16} /><strong>1M+</strong><span>Users impacted</span></div>
       </motion.div>
-      <div className="trusted"><p>TRUSTED BY INNOVATIVE COMPANIES</p><div>{[[Acm, 'AcmeCorp'], [CodeShip, 'Shippo'], [ReasonStudio, 'loopstudio']].map(([logo, name]) => <span key={name}><img src={logo} alt="" />{name}</span>)}</div></div>
+      <div className="trusted"><p>TRUSTED BY INNOVATIVE COMPANIES</p><div>{[[Acm, 'AcmeCorp'], [CodeShip, 'Shippo'], [ReasonStudio, 'loopstudio']].map(([logo, name]) => <span key={name}><img src={logo} alt="logo-image" />{name}</span>)}</div></div>
       <a className="scroll-cue" href="#about" aria-label="Scroll to about section"><ArrowDownRight size={17} /> scroll to explore</a>
     </section>
   );
