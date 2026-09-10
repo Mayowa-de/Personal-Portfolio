@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section id="top" className="hero section-shell">
       <motion.div className="hero-copy" initial={{ opacity: 0, x: -24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .65, ease: 'easeOut' }}>
-        <p className="eyebrow"><span /> FULL STACK DEVELOPER <span /></p>
+        <p className="eyebrow"><span /> FRONTEND ENGINEER <span /></p>
         <h1>I build digital experiences that solve <em>real problems.</em></h1>
         <p className="hero-lede">Helping startups and businesses build fast, scalable, and beautiful web applications.</p>
         <div className="button-row">
